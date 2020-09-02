@@ -1,0 +1,62 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 02.06.2016 23:47:31
+
+newmtl mtl3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal2.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal2.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal2.png
+
+newmtl mtl0_003
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal4.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal4.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal4.png
+
+newmtl mtl1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal3.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal3.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal3.png
+
+newmtl mtl2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal1.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal1.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Logo\Portal1.png

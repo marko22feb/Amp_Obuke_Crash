@@ -1,0 +1,14 @@
+Import the BitmapFontImporter.cs file in your Unity Assets folder.
+Then do a Right Click on the .xml (.font) file
+Click Generate Bitmap Font
+The Script should generate a .material and a .fontsettings file
+Now we use the font you just created in your scene
+Create an UI > Text game object in your scene
+Select the UI Text game object
+In the inspector go to the Text (Script) component and add the .fontsettings file in the Character >Font field
+Then add the .mat file in the Material field.
+
+NOTE: In Crash's Font, you must use only CAPITAL LETTERS to work.
+
+TUTORIAL SOURCE: http://www.benoitfreslon.com/unity-generate-and-import-a-bitmap-font-with-a-free-tool
+	Use Littera Web Software for other games fonts.

@@ -1,0 +1,104 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 14.06.2016 16:52:45
+
+newmtl Material__31
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Cortex1.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Cortex1.png
+
+newmtl Material__30
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Cortex2.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Cortex2.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Cortex2.png
+
+newmtl Material__25
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Spin1.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Spin1.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Spin1.png
+
+newmtl Material__27
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash1.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash1.png
+
+newmtl Material__28
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash2.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash2.png
+
+newmtl Material__26
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash3.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash3.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash3.png
+
+newmtl Material__29
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash4.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash4.png
+	map_d C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\bossarea\Spinning Crash\Crash4.png

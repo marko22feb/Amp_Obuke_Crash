@@ -1,0 +1,12 @@
+root hips: 0 0 0 0 0 0 1 1 1
+string right: 0 0 0 0 0 0 1 1 1
+string left: 0 0 0 0 0 0 1 1 1
+head eyebrow left: 0 0 0 0 0 0 1 1 1
+head lip lower right: 0 0 0 0 0 0 1 1 1
+head lip upper middle: 0 0 0 0 0 0 1 1 1
+head lip upper right: 0 0 0 0 0 0 1 1 1
+head eyebrow right: 0 0 0 0 0 0 1 1 1
+head lip lower middle: 0 0 0 0 0 0 1 1 1
+head lip upper left: 0 0 0 0 0 0 1 1 1
+head jaw: 0 0 0 0 0 0 1 1 1
+head lip lower left: 0 0 0 0 0 0 1 1 1

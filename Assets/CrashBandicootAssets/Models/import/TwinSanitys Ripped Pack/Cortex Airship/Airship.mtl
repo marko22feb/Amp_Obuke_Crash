@@ -1,0 +1,240 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 03.06.2016 17:43:27
+
+newmtl mtl5
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl5.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl5.png
+
+newmtl mtl1_001
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl1.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl1.png
+
+newmtl mtl8
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl8.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl8.png
+
+newmtl mtl0_002
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl0.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl0.png
+
+newmtl mtl14
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl14.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl14.png
+
+newmtl mtl15
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl15.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl15.png
+
+newmtl mtl16
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl16.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl16.png
+
+newmtl mtl12
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl12.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl12.png
+
+newmtl mtl9
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl9.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl9.png
+
+newmtl mtl10
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl10.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl10.png
+
+newmtl mtl13
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl13.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl13.png
+
+newmtl mtl6
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl6.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl6.png
+
+newmtl mtl7
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl7.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl7.png
+
+newmtl mtl11
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl11.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl11.png
+
+newmtl mtl2_001
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl2.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl2.png
+
+newmtl mtl3_001
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl3.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl3.png
+
+newmtl mtl4_001
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl4.png
+	map_Kd C:\Users\ARKAITZ\Desktop\Twinsanity Stuff\Airship\mtl4.png

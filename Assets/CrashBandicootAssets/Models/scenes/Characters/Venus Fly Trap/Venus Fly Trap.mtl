@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 09.01.2016 15:53:04
+
+newmtl default	
+	map_Ka Main Texture.bmp
+	map_Kd Main Texture.bmp
+
+newmtl 02___Default	
+	map_Ka Leaf Texture + Alpha.bmp
+	map_Kd Leaf Texture + Alpha.bmp
+	map_d Leaf Texture + Alpha.bmp
+
+newmtl 02___	
+	map_Ka Teeth Texture + Alpha.bmp
+	map_Kd Teeth Texture + Alpha.bmp
+	map_d Teeth Texture + Alpha.bmp

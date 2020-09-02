@@ -1,0 +1,14 @@
+Idle
+Idle Extended
+Walk/Run
+Jump
+Double Jump
+Land
+Spin Tornado
+Spin Tornado End
+Duck
+Belly Crawl
+Slide
+Slide Jump
+Belly Flop
+Belly Flop Get Up
