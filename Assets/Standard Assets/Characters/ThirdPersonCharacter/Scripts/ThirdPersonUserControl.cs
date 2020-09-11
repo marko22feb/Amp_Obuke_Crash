@@ -69,10 +69,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // pass all parameters to the character control script
             m_Character.Move(m_Move, crouch, m_Jump);
-            if (v != 0)
-            {
-                m_Character.m_Rigidbody.velocity = v * m_Cam.forward * 10f + h * m_Cam.right * 10f;
-            }
+
+            if (m_Character.m_IsGrounded)
+            m_Character.m_Rigidbody.velocity = v * m_Cam.forward * 10f + h * m_Cam.right * 10f;
+
             m_Jump = false;
         }
     }
