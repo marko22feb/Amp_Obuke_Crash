@@ -13,6 +13,7 @@ namespace UnityStandardAssets._2D
         public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
         public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
 
+        public Vector3 LocationOffset;
         private Transform m_Player; // Reference to the player's transform.
 
 
@@ -22,7 +23,15 @@ namespace UnityStandardAssets._2D
             m_Player = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
+        private void Update()
+        {
+            Vector3 newPosition = new Vector3(m_Player.transform.position.x + LocationOffset.x, m_Player.transform.position.y + LocationOffset.y, m_Player.transform.position.z + LocationOffset.z);
+            transform.position = newPosition;
+        }
 
+    }
+}
+        /*
         private bool CheckXMargin()
         {
             // Returns true if the distance between the camera and the player in the x axis is greater than the x margin.
@@ -72,3 +81,4 @@ namespace UnityStandardAssets._2D
         }
     }
 }
+*/

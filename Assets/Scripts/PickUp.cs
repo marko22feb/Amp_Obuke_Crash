@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public GameObject WhumpaPanel;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            GameController.control.WhumpaFruitCount++;
+            GameObject WhumpaPanel = other.GetComponent<PlayerController>().WhumpaPanel;
+            GameController.control.AddWhumpaFruids(1);
             WhumpaPanel.GetComponent<ShowHidePanel>().Show();
             StartCoroutine(WhumpaPanel.GetComponent<ShowHidePanel>().PlayAnimAfterDelay(false, 3f));
             Destroy(gameObject);

@@ -25,6 +25,7 @@ public class ShowHidePanel : MonoBehaviour
         anim.Play(states[1].name);
     }
 
+
     public IEnumerator PlayAnimAfterDelay (bool show, float delay)
     {
         yield return new WaitForSeconds(delay);

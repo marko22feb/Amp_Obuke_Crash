@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 5823054429244235452}
   - component: {fileID: 3093929525515387664}
   - component: {fileID: 145819080425137789}
+  - component: {fileID: -5697318447297986530}
   m_Layer: 0
   m_Name: WumpaFruitHP
   m_TagString: Untagged
@@ -140,7 +141,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b003b4de8db7ad419e2ba7996026b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhumpaPanel: {fileID: 0}
+--- !u!114 &-5697318447297986530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7391811056899255471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41682c59712b7a0468959a605b2ee619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8955806743866504191
 GameObject:
   m_ObjectHideFlags: 0

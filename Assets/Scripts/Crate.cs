@@ -57,7 +57,7 @@ public class Crate : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag != "Player") return;
         StartCoroutine(SelfDestroy());
@@ -66,6 +66,8 @@ public class Crate : MonoBehaviour
             case CrateType.whumpa:
                 GameObject temp = Instantiate(whumpaPrefab);
                 temp.transform.position = transform.parent.position;
+                temp.GetComponent<WhumpaFruit>().player = collision.gameObject.transform;
+                temp.GetComponent<WhumpaFruit>().FollowPlayer();
                 break;
             case CrateType.tnt:
                 break;
