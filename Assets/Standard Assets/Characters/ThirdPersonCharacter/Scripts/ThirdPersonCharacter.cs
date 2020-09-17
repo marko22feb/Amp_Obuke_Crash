@@ -194,7 +194,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
-				m_Rigidbody.velocity = v;
+//				m_Rigidbody.velocity = v;
 			}
 		}
 
@@ -212,7 +212,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
-                Debug.Log("Is on Ground");
 				m_Animator.applyRootMotion = true;
 			}
 			else

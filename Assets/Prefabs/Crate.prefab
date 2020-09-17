@@ -31,6 +31,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2660386400328418297
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734295170583593179}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: cc0bf72c5763743468b1ee3d764d3d04,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: e210aa917afc1a94daa786bc16f63449, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1.39
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.030555556
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3000499409515384283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,6 +140,81 @@ PrefabInstance:
       propertyPath: m_Name
       value: BouncingCrate
       objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.bounceSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.checkpointsSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.tntExplosionSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.bounceSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 87ec14e18e12f084d9f9d85400121596, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.bounceSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35f15ded53827ba458fb9075886ff550, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e210aa917afc1a94daa786bc16f63449, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.checkpointsSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e4840135b6b8114cb00bd876178a6a3, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.checkpointsSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c74acca7ad2c545995411e39ec1cb3, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.lockedBounceSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cdcb242481f4419409eecc7747a5c79c, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.slotChangeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cdcb242481f4419409eecc7747a5c79c, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.nitroBounceSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3bb67d394685b124fa23a04a963332a8, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.nitroExplosionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6be8cbf3d1883c4428bd6d9f94f70d7e, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.tntCountdownSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e6637bbe0d0edcd489243cb0d92aa1b9, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.tntExplosionSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dc3e6d5bc037b64d8260e0ea9997248, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: sounds.tntExplosionSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd15d8211adc80e479b78f1deb966e15, type: 3}
     - target: {fileID: 7408070257567498003, guid: 959d599aab70c9942a11c824b511e898,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,6 +272,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959d599aab70c9942a11c824b511e898, type: 3}
+--- !u!1 &8734295170583593179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5806716063741938944, guid: 959d599aab70c9942a11c824b511e898,
+    type: 3}
+  m_PrefabInstance: {fileID: 3000499409515384283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5723277939682669256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7408070257567498003, guid: 959d599aab70c9942a11c824b511e898,

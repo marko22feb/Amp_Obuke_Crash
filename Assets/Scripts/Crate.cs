@@ -12,10 +12,15 @@ public class Crate : MonoBehaviour
     public struct CrateTexture {public CrateType type; public Texture TopTexture; public Texture SideTexture; };
     public List<CrateTexture> textures;
 
+    [System.Serializable]
+    public struct CrateSoundEffects { public List<AudioClip> bounceSounds; public AudioClip breakSound; public List<AudioClip> checkpointsSounds; public AudioClip lockedBounceSound; public AudioClip slotChangeSound; public AudioClip nitroBounceSound; public AudioClip nitroExplosionSound; public AudioClip tntCountdownSound; public List<AudioClip> tntExplosionSounds; };
+    public CrateSoundEffects sounds;
+
     private Renderer rend;
     private Texture Ttx;
     private Texture Stx;
     private Animation anim;
+    private AudioSource audio;
     private List<AnimationState> states;
 
     public GameObject whumpaPrefab;
@@ -23,6 +28,7 @@ public class Crate : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animation>();
+        audio = GetComponent<AudioSource>();
         states = new List<AnimationState>(anim.Cast<AnimationState>());
     }
 
@@ -53,6 +59,7 @@ public class Crate : MonoBehaviour
     public IEnumerator SelfDestroy()
     {
         anim.Play(states[0].name);
+        AudioSource.PlayClipAtPoint(sounds.breakSound, transform.position);
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
