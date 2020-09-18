@@ -16,6 +16,10 @@ public class Crate : MonoBehaviour
     public struct CrateSoundEffects { public List<AudioClip> bounceSounds; public AudioClip breakSound; public List<AudioClip> checkpointsSounds; public AudioClip lockedBounceSound; public AudioClip slotChangeSound; public AudioClip nitroBounceSound; public AudioClip nitroExplosionSound; public AudioClip tntCountdownSound; public List<AudioClip> tntExplosionSounds; };
     public CrateSoundEffects sounds;
 
+    [System.Serializable]
+    public struct CrateDestroyedSprites { public List<Sprite> sprites; public CrateType type; }
+    public List<CrateDestroyedSprites> crateDestroyedSprites;
+
     private Renderer rend;
     private Texture Ttx;
     private Texture Stx;
@@ -23,6 +27,7 @@ public class Crate : MonoBehaviour
     private AudioSource audio;
     private List<AnimationState> states;
 
+    public ParticleSystem destroyedFX;
     public GameObject whumpaPrefab;
 
     private void Awake()
@@ -60,7 +65,27 @@ public class Crate : MonoBehaviour
     {
         anim.Play(states[0].name);
         AudioSource.PlayClipAtPoint(sounds.breakSound, transform.position);
-        yield return new WaitForSeconds(1f);
+        GetComponent<SkinnedMeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        List < Sprite > sprites = new List<Sprite>();
+        foreach (CrateDestroyedSprites list in crateDestroyedSprites)
+        {
+            if (list.type == type) sprites = list.sprites;
+            break;
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            destroyedFX.textureSheetAnimation.RemoveSprite(0);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            destroyedFX.textureSheetAnimation.AddSprite(sprites[i]);
+        }
+   
+        destroyedFX.Play();
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 

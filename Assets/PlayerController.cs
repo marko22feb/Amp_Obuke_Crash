@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Animation anim;
     private Animator animC;
     private AudioSource audio;
+    public ParticleSystem dust;
     public List<AudioClip> CrashSpins;
     public List<AudioClip> WaterSounds;
     public AudioClip LandSounds;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
                 AudioSource.PlayClipAtPoint(LandSounds, transform.position, volume);
             }
         }
+        dust.Play();
     }
 
     public void EnableController()
