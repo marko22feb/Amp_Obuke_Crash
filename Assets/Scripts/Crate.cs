@@ -11,6 +11,7 @@ public class Crate : MonoBehaviour
     [System.Serializable]
     public struct CrateTexture {public CrateType type; public Texture TopTexture; public Texture SideTexture; };
     public List<CrateTexture> textures;
+    public List<Texture> tntTextures;
 
     [System.Serializable]
     public struct CrateSoundEffects { public List<AudioClip> bounceSounds; public AudioClip breakSound; public List<AudioClip> checkpointsSounds; public AudioClip lockedBounceSound; public AudioClip slotChangeSound; public AudioClip nitroBounceSound; public AudioClip nitroExplosionSound; public AudioClip tntCountdownSound; public List<AudioClip> tntExplosionSounds; };
@@ -29,6 +30,7 @@ public class Crate : MonoBehaviour
 
     public ParticleSystem destroyedFX;
     public GameObject whumpaPrefab;
+    public GameObject checkpointPrefab;
 
     private void Awake()
     {
@@ -81,24 +83,57 @@ public class Crate : MonoBehaviour
    
         destroyedFX.Play();
         yield return new WaitForSeconds(2f);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
+    }
+
+    public IEnumerator TNT()
+    {
+        rend = GetComponent<Renderer>();
+        List<Material> matList = new List<Material>();
+        rend.GetMaterials(matList);
+
+        matList[1].SetTexture("_MainTex", tntTextures[0]);
+        AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
+        yield return new WaitForSeconds(1f);
+        matList[1].SetTexture("_MainTex", tntTextures[1]);
+        AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
+        yield return new WaitForSeconds(1f);
+        matList[1].SetTexture("_MainTex", tntTextures[2]);
+        AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
+        yield return new WaitForSeconds(1f);
+        AudioSource.PlayClipAtPoint(sounds.tntExplosionSounds[Random.Range(0, sounds.tntExplosionSounds.Count)], transform.position);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5f);
+
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            if (hitColliders[i].tag == "Crate")
+            {
+
+            }
+        }
+
+        StartCoroutine(SelfDestroy());
     }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag != "Player") return;
-        StartCoroutine(SelfDestroy());
         switch (type)
         {
             case CrateType.whumpa:
+                StartCoroutine(SelfDestroy());
                 GameObject temp = Instantiate(whumpaPrefab);
                 temp.transform.position = transform.parent.position;
                 temp.GetComponent<WhumpaFruit>().player = collision.gameObject.transform;
                 temp.GetComponent<WhumpaFruit>().FollowPlayer();
                 break;
             case CrateType.tnt:
+                StartCoroutine(TNT());
                 break;
             case CrateType.checkpoint:
+                GameObject checkpoint = Instantiate(checkpointPrefab);
+                checkpoint.transform.position = transform.position;
+                Destroy(transform.parent.gameObject);
                 break;
             case CrateType.lives:
                 break;
@@ -107,6 +142,7 @@ public class Crate : MonoBehaviour
             case CrateType.akuaku:
                 break;
             case CrateType.nitro:
+                StartCoroutine(SelfDestroy());
                 break;
             default:
                 break;
