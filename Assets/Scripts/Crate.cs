@@ -70,18 +70,13 @@ public class Crate : MonoBehaviour
         List < Sprite > sprites = new List<Sprite>();
         foreach (CrateDestroyedSprites list in crateDestroyedSprites)
         {
-            if (list.type == type) sprites = list.sprites;
-            break;
+            if (list.type == type) { sprites = list.sprites; break; }
         }
+
 
         for (int i = 0; i < 4; i++)
         {
-            destroyedFX.textureSheetAnimation.RemoveSprite(0);
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            destroyedFX.textureSheetAnimation.AddSprite(sprites[i]);
+            destroyedFX.textureSheetAnimation.SetSprite(i, sprites[i]);
         }
    
         destroyedFX.Play();
