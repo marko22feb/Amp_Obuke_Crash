@@ -60,8 +60,8 @@ public class Crate : MonoBehaviour
         List<Material> matList = new List<Material>();
         rend.GetMaterials(matList);
 
-        matList[0].SetTexture("_MainTex", Ttx);
-        matList[1].SetTexture("_MainTex", Stx);
+        matList[0].SetTexture("_BaseMap", Ttx);
+        matList[1].SetTexture("_BaseMap", Stx);
     }
 
     public IEnumerator SelfDestroy()
@@ -93,13 +93,13 @@ public class Crate : MonoBehaviour
         List<Material> matList = new List<Material>();
         rend.GetMaterials(matList);
 
-        matList[1].SetTexture("_MainTex", tntTextures[0]);
+        matList[1].SetTexture("_BaseMap", tntTextures[0]);
         AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
         yield return new WaitForSeconds(1f);
-        matList[1].SetTexture("_MainTex", tntTextures[1]);
+        matList[1].SetTexture("_BaseMap", tntTextures[1]);
         AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
         yield return new WaitForSeconds(1f);
-        matList[1].SetTexture("_MainTex", tntTextures[2]);
+        matList[1].SetTexture("_BaseMap", tntTextures[2]);
         AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
         yield return new WaitForSeconds(1f);
         AudioSource.PlayClipAtPoint(sounds.tntExplosionSounds[Random.Range(0, sounds.tntExplosionSounds.Count)], transform.position);
