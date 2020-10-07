@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Crate : MonoBehaviour
 {
@@ -102,22 +103,27 @@ public class Crate : MonoBehaviour
         AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
         yield return new WaitForSeconds(1f);
         AudioSource.PlayClipAtPoint(sounds.tntExplosionSounds[Random.Range(0, sounds.tntExplosionSounds.Count)], transform.position);
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 5f);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 6f);
 
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].tag == "Crate")
+            if (hitColliders[i].gameObject.tag == "Crate")
             {
-
+                if(hitColliders[i].gameObject != this.gameObject)
+                {
+                    hitColliders[i].GetComponent<Crate>().CrateActivated(GameController.control.Player.GetComponent<CapsuleCollider>());
+                }
+            } else if (hitColliders[i].gameObject.tag == "Player")
+            {
+                hitColliders[i].GetComponent<DamageController>().Damage();
             }
         }
 
         StartCoroutine(SelfDestroy());
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void CrateActivated(Collider collision)
     {
-        if (collision.gameObject.tag != "Player") return;
         switch (type)
         {
             case CrateType.whumpa:
@@ -133,6 +139,7 @@ public class Crate : MonoBehaviour
             case CrateType.checkpoint:
                 GameObject checkpoint = Instantiate(checkpointPrefab);
                 checkpoint.transform.position = transform.position;
+                GameController.control.Save(SceneManager.GetActiveScene().name);
                 Destroy(transform.parent.gameObject);
                 break;
             case CrateType.lives:
@@ -147,5 +154,17 @@ public class Crate : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag != "Player") return;
+        CrateActivated(collision);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Player") return;
+        if (type == CrateType.checkpoint) CrateActivated(GameController.control.Player.GetComponent<CapsuleCollider>());
     }
 }

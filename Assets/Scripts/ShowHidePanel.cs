@@ -5,14 +5,28 @@ using UnityEngine;
 
 public class ShowHidePanel : MonoBehaviour
 {
+    public enum PanelType {animatedPanels, mainPanel};
+    public PanelType type;
+
+    GameObject MainPanel;
+    GameObject DeathPanel;
+
     Animation anim;
     List<AnimationState> states;
 
     public void Awake()
     {
-        anim = GetComponent<Animation>();
-        states = new List<AnimationState>(anim.Cast<AnimationState>());
-        Hide();
+        if (type == PanelType.animatedPanels)
+        {
+            anim = GetComponent<Animation>();
+            states = new List<AnimationState>(anim.Cast<AnimationState>());
+            Hide();
+        }
+        else
+        {
+            MainPanel = transform.GetChild(0).gameObject;
+            DeathPanel = transform.GetChild(1).gameObject;
+        }
     }
 
     public void Hide()
@@ -25,6 +39,11 @@ public class ShowHidePanel : MonoBehaviour
         anim.Play(states[1].name);
     }
 
+    public void OnDeath()
+    {
+        MainPanel.SetActive(false);
+        DeathPanel.SetActive(true);
+    }
 
     public IEnumerator PlayAnimAfterDelay (bool show, float delay)
     {

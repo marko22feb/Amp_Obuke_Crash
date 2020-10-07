@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;
     public List<AudioClip> CrashSpins;
     public List<AudioClip> WaterSounds;
+    public List<AudioClip> GroanSounds;
     public AudioClip LandSounds;
     public PhysicMaterial Land;
     public PhysicMaterial Water;
@@ -51,6 +52,19 @@ public class PlayerController : MonoBehaviour
             }
         }
         dust.Play();
+    }
+
+    public void PlayAnim(string animName, List<AudioClip> sounds)
+    {
+        anim.Play(animName);
+        int a = Random.Range(0, sounds.Count);
+        audio.clip = sounds[a];
+        audio.Play(0);
+    }
+
+    public void GameOver()
+    {
+        GameController.control.GameOver();
     }
 
     public void EnableController()

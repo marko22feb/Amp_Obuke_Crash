@@ -5016,6 +5016,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BouncingCrate
       objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938944, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: m_TagString
+      value: Crate
+      objectReference: {fileID: 0}
     - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
         type: 3}
       propertyPath: sounds.bounceSounds.Array.size
@@ -5050,6 +5055,11 @@ PrefabInstance:
         type: 3}
       propertyPath: crateDestroyedSprites.Array.data[2].sprites.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: tntTextures.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
         type: 3}
@@ -5204,6 +5214,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2086887759255248596, guid: 93f6cebb5de4f3e41aa3872a110ae588,
         type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: tntTextures.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 9d041641bc081134e8adf7c42bcb2467, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: tntTextures.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 20e30e8a25a3de245a0c1759cf4a965c, type: 3}
+    - target: {fileID: 5806716063741938946, guid: 959d599aab70c9942a11c824b511e898,
+        type: 3}
+      propertyPath: tntTextures.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: f4c86f8ed6aeb9b449537d071a59ea80, type: 3}
     - target: {fileID: 7408070257567498003, guid: 959d599aab70c9942a11c824b511e898,
         type: 3}
       propertyPath: m_LocalPosition.x
