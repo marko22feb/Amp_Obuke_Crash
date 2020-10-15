@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : PawnController
 {
     public GameObject WhumpaPanel;
     private Animation anim;
     private Animator animC;
-    private AudioSource audio;
+    private AudioSource audioSource;
     public ParticleSystem dust;
     public List<AudioClip> CrashSpins;
     public List<AudioClip> WaterSounds;
@@ -15,12 +15,14 @@ public class PlayerController : MonoBehaviour
     public AudioClip LandSounds;
     public PhysicMaterial Land;
     public PhysicMaterial Water;
+    
+    public enum MessageType {damage, threat, flee }
 
     public void Awake()
     {
         anim = GetComponent<Animation>();
         animC = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Update()
@@ -31,8 +33,8 @@ public class PlayerController : MonoBehaviour
             {
                 anim.Play("Tornado");
                 int a = Random.Range(0, CrashSpins.Count);
-                audio.clip = CrashSpins[a];
-                audio.Play(0);
+                audioSource.clip = CrashSpins[a];
+                audioSource.Play(0);
             }
         }
     }
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
                 AudioSource.PlayClipAtPoint(LandSounds, transform.position, volume);
             }
         }
+        OnMessageSend(MessageType.threat, 20f, transform.position);
         dust.Play();
     }
 
@@ -58,8 +61,8 @@ public class PlayerController : MonoBehaviour
     {
         anim.Play(animName);
         int a = Random.Range(0, sounds.Count);
-        audio.clip = sounds[a];
-        audio.Play(0);
+        audioSource.clip = sounds[a];
+        audioSource.Play(0);
     }
 
     public void GameOver()

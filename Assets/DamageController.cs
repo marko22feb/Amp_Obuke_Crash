@@ -6,6 +6,12 @@ public class DamageController : MonoBehaviour
 {
     public enum UnitType { Player, Mob, Elite, Boss };
     public UnitType type;
+
+    public void OnMessageReceived(PlayerController.MessageType type)
+    {
+        Debug.Log("DamageController");
+    }
+
     public void Damage()
     {
         switch (type)
