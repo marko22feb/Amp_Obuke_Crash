@@ -53,7 +53,7 @@ public class PlayerController : PawnController
                 AudioSource.PlayClipAtPoint(LandSounds, transform.position, volume);
             }
         }
-        OnMessageSend(MessageType.threat, 20f, transform.position);
+        OnMessageSend(MessageType.threat, 10f, transform.position);
         dust.Play();
     }
 

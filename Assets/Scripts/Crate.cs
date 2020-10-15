@@ -33,6 +33,8 @@ public class Crate : MonoBehaviour
     public GameObject whumpaPrefab;
     public GameObject checkpointPrefab;
 
+    private bool HasBeenActivated = false;
+
     private void Awake()
     {
         anim = GetComponent<Animation>();
@@ -80,7 +82,7 @@ public class Crate : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             destroyedFX.textureSheetAnimation.SetSprite(i, sprites[i]);
-        }
+       }
    
         destroyedFX.Play();
         yield return new WaitForSeconds(2f);
@@ -103,27 +105,36 @@ public class Crate : MonoBehaviour
         AudioSource.PlayClipAtPoint(sounds.tntCountdownSound, transform.position);
         yield return new WaitForSeconds(1f);
         AudioSource.PlayClipAtPoint(sounds.tntExplosionSounds[Random.Range(0, sounds.tntExplosionSounds.Count)], transform.position);
+
+        Explode();
+
+        StartCoroutine(SelfDestroy());
+    }
+
+    public void Explode()
+    {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 6f);
 
         for (int i = 0; i < hitColliders.Length; i++)
         {
             if (hitColliders[i].gameObject.tag == "Crate")
             {
-                if(hitColliders[i].gameObject != this.gameObject)
+                if (hitColliders[i].gameObject != this.gameObject)
                 {
                     hitColliders[i].GetComponent<Crate>().CrateActivated(GameController.control.Player.GetComponent<CapsuleCollider>());
                 }
-            } else if (hitColliders[i].gameObject.tag == "Player")
+            }
+            else if (hitColliders[i].gameObject.tag == "Player")
             {
                 hitColliders[i].GetComponent<DamageController>().Damage();
             }
         }
-
-        StartCoroutine(SelfDestroy());
     }
 
     private void CrateActivated(Collider collision)
     {
+        if (HasBeenActivated) return;
+        HasBeenActivated = true;
         switch (type)
         {
             case CrateType.whumpa:
@@ -149,6 +160,7 @@ public class Crate : MonoBehaviour
             case CrateType.akuaku:
                 break;
             case CrateType.nitro:
+                Explode();
                 StartCoroutine(SelfDestroy());
                 break;
             default:
@@ -158,13 +170,18 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag != "Player") return;
-        CrateActivated(collision);
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "NPC")
+        {
+            CrateActivated(collision);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "Player") return;
-        if (type == CrateType.checkpoint) CrateActivated(GameController.control.Player.GetComponent<CapsuleCollider>());
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "NPC")
+        {
+            Debug.Log(collision.gameObject.name);
+            if (type == CrateType.checkpoint || type == CrateType.nitro) CrateActivated(GameController.control.Player.GetComponent<CapsuleCollider>());
+        }
     }
 }
