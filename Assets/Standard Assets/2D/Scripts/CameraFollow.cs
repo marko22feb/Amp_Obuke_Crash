@@ -21,6 +21,8 @@ namespace UnityStandardAssets._2D
         {
             // Setting up the reference.
             m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+            transform.rotation = m_Player.rotation;
+            Cursor.visible = false;
         }
 
         private void Update()
@@ -29,6 +31,17 @@ namespace UnityStandardAssets._2D
             transform.position = newPosition;
         }
 
+
+        private void FixedUpdate()
+        {
+            Vector3 offset = new Vector3(1, 1, 1);
+            Vector3 newRotation = 
+                //Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 50, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * 25, Vector3.right) * offset;
+                new Vector3(transform.eulerAngles.x - Input.GetAxis("Mouse Y") * 25, transform.eulerAngles.y + (Input.GetAxis("Mouse X") * 50), 0);
+
+
+            transform.rotation = Quaternion.Euler(newRotation);
+        }
     }
 }
         /*
