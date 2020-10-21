@@ -32,10 +32,8 @@ public class CritterController : PawnController
       DesiredLocation = GameController.control.Player.transform.position;
       transform.LookAt(GameController.control.Player.transform);
 
-        //  Quaternion tempRotation = Quaternion.LookRotation(GameController.control.Player.transform.position, Vector3.up);
-        // Debug.Log(tempRotation);
-        Quaternion lookAwayRotation = new Quaternion(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z, transform.rotation.w);
-      transform.rotation = lookAwayRotation;
+      transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 180, transform.eulerAngles.z);
+      
       DesiredLocation += transform.forward * 10f;
     }
 
