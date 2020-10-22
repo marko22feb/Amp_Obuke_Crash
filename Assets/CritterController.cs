@@ -59,5 +59,21 @@ public class CritterController : PawnController
             Debug.Log("OutOfRange");
             if (!IsGettingRandomLocation) StartCoroutine(RandomIdleMove());
         }
+
+    }
+
+    public void DestroySelf()
+    {
+        ChickenHut.GetComponent<ChickenSpawner>().Despawn(gameObject);
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.AddForce((transform.position - other.transform.position).normalized * 400, ForceMode.Force);
+        }
     }
 }

@@ -128,7 +128,11 @@ public class Crate : MonoBehaviour
             {
                 hitColliders[i].GetComponent<DamageController>().Damage();
             }
-        }
+            else if (hitColliders[i].gameObject.tag == "NPC")
+            {
+                hitColliders[i].GetComponent<CritterController>().DestroySelf();
+            }
+            }
     }
 
     private void CrateActivated(Collider collision)
